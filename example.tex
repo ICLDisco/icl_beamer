@@ -1,0 +1,142 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme[headline]{ICL}
+% or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+% import the necessary packages
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{pifont}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xspace}
+\usepackage{wrapfig}
+%\usepackage{verbatim}
+\usepackage{tikz}
+
+% define additional colors
+\definecolor{shadecolor}{gray}{.30}
+\definecolor{orange}{RGB}{255,127,0}
+\definecolor{lightorange}{RGB}{247,147,0}
+
+% define additional commands
+\newcommand{\file}[1]{\nolinkurl{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\defspace}{\vspace{0.5\baselineskip}}
+
+\title[Checking the ICL beamer template]{ICL beamer template}
+
+\author[M.Faverge]{Mathieu Faverge}
+\author[G.Bosilca]{George Bosilca}
+
+\date[\today]{\today}
+
+\subject{How nice is ICL beamer template ?}
+
+% Headline
+\setbeamertemplate{headline}
+    {%
+      \ifnum\thesection>0%
+      \begin{beamercolorbox}{section in head/foot}%
+        \vskip2pt%
+        \hskip\ICL@margin\insertsectionnavigationhorizontal{\ICL@framewidth}{}{}%
+      \end{beamercolorbox}%
+      \fi%
+    }%
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\begin{document}
+
+%----------------------------------------------------
+%----------------------------------------------------
+\maketitle
+
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+%----------------------------------------------------
+%----------------------------------------------------
+\section{La science et ses besoins d'outils d'experimentation}
+
+\begin{frame}
+\frametitle{Bigger is better ...}
+\begin{overprint}
+  \onslide<1>\centering\includegraphics[scale=0.3]{ICL-slide-logo}
+  \onslide<2>\centering\includegraphics[scale=0.6]{ICL-slide-logo}
+\end{overprint}
+\end{frame}
+
+
+%----------------------------------------------------
+%----------------------------------------------------
+\section{Les fautes}
+
+\begin{frame} 
+  \frametitle{La source d'erreurs la plus courante:}
+  \begin{columns}
+    \begin{column}{6cm}
+      \begin{overprint}[6cm]
+        \onslide<1>\includegraphics[scale=0.3]{ICL-slide-logo}
+        \onslide<2>\includegraphics[scale=0.3]{ICL-slide-logo}
+        \onslide<3>\includegraphics[scale=0.225]{ICL-slide-logo}
+      \end{overprint}
+    \end{column}
+    \begin{column}{3cm}
+      \begin{scriptsize}
+        \begin{overprint}[3cm]
+          \onslide<1> 2003 La navette Columbia explose a l'entrée dans l'atmosphere. Cause la simulation de la rentrée avait validé l'approche avec une fisuere dans le revetement d'une aile. Cout 7 vies humaines, $7 milliards$\$.
+          \onslide<2> 2008 Le bombardier B52. Une erreur software a diverti le nez de l'appareil vers le sol juste apres le decolage. Cout $3 milliards$\$.
+          \onslide<3> 2012 Knight Capital, stock-exchange. Un algorithme d'achat d'actions a achete des millions d'actions pour les vendre seulement apres quelque secondes pour quelque cents de moins chaque. Cout $440 millions$\$.
+        \end{overprint}
+      \end{scriptsize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame} 
+  \frametitle{La source d'erreurs la plus courante:}
+  Indiscutablement
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Les origines des fautes}
+  \includegraphics[width=0.4\textwidth]{ICL-slide-logo}
+  \begin{itemize}
+  \item Sources multiple partant des default physiques aux rayons de haute
+    energie.
+  \item Tout composant peut subir des fautes plus ou moins graves
+  \item La miniaturization de la gravure augmente les risques de perturbation
+    exterieure.
+  \end{itemize}
+\end{frame}
+
+%----------------------------------------------------
+%----------------------------------------------------
+
+\end{document}
